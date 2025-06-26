@@ -1,14 +1,9 @@
 package MultiThreading;
 
-public class ThreadClass extends Thread {
-
-    @Override
-    public void run() {
-        System.out.println("Thread Class");
-    }
+public class ThreadClass {
 
     public static void main(String[] args) {
-        ThreadClass obj = new ThreadClass();
-        obj.start();
+        Thread thread = new Thread(() -> System.out.println("Thread Created."));
+        thread.start();
     }
 }
